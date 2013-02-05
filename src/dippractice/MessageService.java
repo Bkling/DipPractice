@@ -2,19 +2,21 @@ package dippractice;
 
 public class MessageService {
 
-    private static final String MSG = "Hello";
+    //private static final String MSG = "Hello";
+    private String msg;
     private OutputStrategy out;
     private InputStrategy in;
 
-    public MessageService(OutputStrategy out) {
+    public MessageService(InputStrategy in, OutputStrategy out) {
+        this.in = in;
         this.out = out;
     }
 
     public void outputMessage() {
-        out.outputMessage(MSG);
+        out.outputMessage(msg);
     }
 
     public void inputMessage() {
-        in.inputMessage(MSG);
+        msg = in.inputMessage();
     }
 }

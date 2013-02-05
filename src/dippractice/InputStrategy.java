@@ -2,5 +2,5 @@ package dippractice;
 
 public interface InputStrategy {
 
-    public abstract void inputMessage(String msg);
+    public abstract String inputMessage();
 }

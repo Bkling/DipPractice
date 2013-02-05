@@ -1,9 +1,14 @@
 package dippractice;
 
+import java.util.Scanner;
+
 public class KeyboardInputStrategy implements InputStrategy {
 
     @Override
-    public void inputMessage(String msg) {
-        System.out.println(msg);
+    public String inputMessage() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter some input: ");
+        String msg = keyboard.nextLine();
+        return msg;
     }
 }
